@@ -13,12 +13,12 @@
     margin: auto;
     align-items: center;
 }
-/* #image-container{
+#image-container{
     display: grid;
     grid-auto-flow: column;
-} */
+}
 .image-container span{
-    position: absolute;
+    position: fixed;
     font-size: 40px;
     font-weight: 900;
     color: blue;
@@ -26,9 +26,9 @@
 }
 .image-container span:first-child{
     top: 70px;
-    left: 15px;
+    left: 130px;
 }
 .image-container span:last-child{
     top: 80px;
-    right: 15px;
+    right: 130px;
 }
