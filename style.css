@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.image-container{
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 1200px;
+    max-height: 190px;
+    overflow: hidden;
+    margin: auto;
+    align-items: center;
+}
+/* #image-container{
+    display: grid;
+    grid-auto-flow: column;
+} */
+.image-container span{
+    position: absolute;
+    font-size: 40px;
+    font-weight: 900;
+    color: blue;
+    cursor: pointer;
+}
+.image-container span:first-child{
+    top: 70px;
+    left: 15px;
+}
+.image-container span:last-child{
+    top: 80px;
+    right: 15px;
+}
