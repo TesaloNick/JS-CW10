@@ -19,6 +19,7 @@ section{
     grid-auto-flow: column;
     align-items: center;
     transition: 0.5s;
+    margin-left: 480px;
 }
 .arrow{
     position: absolute;

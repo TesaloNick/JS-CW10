@@ -7,7 +7,7 @@ const slides = new Array(10)
 slides.fill('')                     // наполнить массив хоть чем-то, чтобы перебрать массив в последующем
 const arr = []
 slides.forEach((slide, index) => {  // slides.map((slide, index)
-    slide = new Image(200)          // создает картинку с шириной 300
+    slide = new Image(240)          // создает картинку с шириной 300
     slide.src = `images/${index+1}.jpg`
     // console.log(slide);
     sliderContainer.appendChild(slide)
@@ -42,7 +42,7 @@ function slideRight() {
         ++counter
         arrowLeft.style.opacity = 1;
         arrowRight.style.opacity = 1;
-        sliderContainer.style.transform = `translate3d(-${counter*300}px, 0, 0)`  // sliderContainer.style.margin = `-${STEP*300}px`
+        sliderContainer.style.transform = `translate3d(-${counter*240}px, 0, 0)`  // sliderContainer.style.margin = `-${STEP*300}px`
     }
     setTimeout(change, 300)
     // mainImage.setAttribute('src', `images/${counter+1}.jpg`);
@@ -57,7 +57,7 @@ function slideLeft() {
         --counter
         arrowLeft.style.opacity = 1;
         arrowRight.style.opacity = 1;
-        sliderContainer.style.transform = `translate3d(-${counter*300}px, 0, 0)`
+        sliderContainer.style.transform = `translate3d(-${counter*240}px, 0, 0)`
     }
     setTimeout(change, 300)
 
