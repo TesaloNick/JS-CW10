@@ -7,7 +7,7 @@
     max-width: 1200px;
     margin: auto;
 }
-.image-container{
+section{
     position: relative;
     display: grid;
     grid-auto-flow: column;
@@ -19,20 +19,18 @@
     grid-auto-flow: column;
     align-items: center;
 }
-.image-container span{
-    position: fixed;
-    font-size: 40px;
-    font-weight: 900;
-    color: blue;
+.arrow{
+    position: absolute;
+    width: 50px;
     cursor: pointer;
     z-index: 2;
 }
-.image-container span:first-child{
-    top: 70px;
+.arrow:first-child{
+    top: 200px;
     left: 130px;
 }
-.image-container span:last-child{
-    top: 80px;
+.arrow:last-child{
+    top: 200px;
     right: 130px;
 }
 .pagination{
@@ -42,11 +40,15 @@
     width: 300px;
     justify-items: center;
     padding: 30px 0;
-    /* grid-gap: 10px; */
 }
 .pagination div{
     width: 10px;
     height: 10px;
     border: 1px solid black;
     border-radius: 50%;
+}
+.main-img{
+    display: block;
+    width: 90%;
+    margin: auto;
 }
