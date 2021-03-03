@@ -18,20 +18,27 @@ section{
     display: grid;
     grid-auto-flow: column;
     align-items: center;
+    transition: 0.5s;
 }
 .arrow{
     position: absolute;
-    width: 50px;
+    width: 70px;
     cursor: pointer;
     z-index: 2;
+    padding: 300px 10px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.arrow:hover{
+    background-color: rgba(133, 132, 132, 0.192);
 }
 .arrow:first-child{
-    top: 200px;
     left: 130px;
+    top: 50px;
 }
 .arrow:last-child{
-    top: 200px;
     right: 130px;
+    top: 50px;
 }
 .pagination{
     display: grid;
@@ -47,8 +54,13 @@ section{
     border: 1px solid black;
     border-radius: 50%;
 }
+.main-img-container{
+    display: flex;
+    align-items: center;
+    height: 750px;
+}
 .main-img{
-    display: block;
     width: 90%;
     margin: auto;
+    border-radius: 10px;
 }
