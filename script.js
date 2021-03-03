@@ -6,7 +6,7 @@ slides.fill('')                     // наполнить массив хоть 
 
 
 slides.forEach((slide, index) => {  // slides.map((slide, index)
-    slide = new Image(300)
+    slide = new Image(200)          // создает картинку с шириной 300
     slide.src = `images/${index+1}.jpg`
     sliderContainer.appendChild(slide)
 })
@@ -26,13 +26,17 @@ drawArrows()
 
 let STEP = 0;
 function slideRight() {
-    if (STEP === slides.length-4) {              // блокировать движение вправо
-        arrowLeft.style.opacity = 0.5;
-        arrowLeft.style.pointerEvent = 'none';
+    if (STEP === slides.length-8) {              // блокировать движение вправо
+        arrowRight.style.opacity = 0.5;
+        arrowRight.style.pointerEvent = 'none';
     } else {
         ++STEP
-        sliderContainer.style.transform = `translate3d(-${STEP*300}px, 0, 0)`    //     sliderContainer.style.margin = `-${STEP*300}px`
+        arrowLeft.style.opacity = 1;
+        arrowRight.style.opacity = 1;
+        sliderContainer.style.transform = `translate3d(-${STEP*300}px, 0, 0)`  // sliderContainer.style.margin = `-${STEP*300}px`
     }
+    console.log(STEP);
+
 }
 function slideLeft() {
     if (STEP === 0) {
@@ -40,6 +44,9 @@ function slideLeft() {
         arrowLeft.style.pointerEvent = 'none';
     } else {
         --STEP
+        arrowLeft.style.opacity = 1;
+        arrowRight.style.opacity = 1;
         sliderContainer.style.transform = `translate3d(-${STEP*300}px, 0, 0)`
     }
+    console.log(STEP);
 }
