@@ -8,6 +8,7 @@ const slides = new Array(10)
 slides.fill('')                     // наполнить массив хоть чем-то, чтобы перебрать массив в последующем
 const arrSlides = [];        // массив с картинками внизу
 const arrPaginationDot = [];        // массив с картинками внизу
+let counter = 0;
 
 slides.forEach((slide, index) => {  // slides.map((slide, index)
     slide = new Image(240)          // создает картинку с шириной 300
@@ -16,6 +17,16 @@ slides.forEach((slide, index) => {  // slides.map((slide, index)
     sliderContainer.appendChild(slide)
     let paginationDot = document.createElement('div')
     paginationDot.classList.add(`dot${index+1}`)
+    paginationDot.addEventListener('click', () => {                     // выведение картинки наверх
+        mainImage.setAttribute('src', `images/${index+1}.jpg`)
+        counter = index
+        sliderContainer.style.transform = `translate3d(-${index*240}px, 0, 0)`
+        arrSlides[counter].style.opacity = '1'
+        if ()
+        // arrSlides[counter-1].style.opacity = '0.5'
+        arrPaginationDot[counter].style.backgroundColor = 'black'
+        // arrPaginationDot[counter-1].style.backgroundColor = 'white'
+    })
     pagination.appendChild(paginationDot)
     arrSlides.push(slide)
     arrPaginationDot.push(paginationDot)
@@ -38,7 +49,6 @@ drawArrows()
 arrowRight.addEventListener('click', slideRight)
 arrowLeft.addEventListener('click', slideLeft)
 
-let counter = 0;
 let change = function() {                     // выведение картинки наверх
     mainImage.setAttribute('src', `images/${counter+1}.jpg`)
 }
