@@ -7,7 +7,7 @@ const pagination = document.querySelector('.pagination')
 const slides = new Array(10)
 slides.fill('')                     // наполнить массив хоть чем-то, чтобы перебрать массив в последующем
 const arrSlides = [];        // массив с картинками внизу
-const arrPginationDot = [];        // массив с картинками внизу
+const arrPaginationDot = [];        // массив с картинками внизу
 
 slides.forEach((slide, index) => {  // slides.map((slide, index)
     slide = new Image(240)          // создает картинку с шириной 300
@@ -18,10 +18,10 @@ slides.forEach((slide, index) => {  // slides.map((slide, index)
     paginationDot.classList.add(`dot${index+1}`)
     pagination.appendChild(paginationDot)
     arrSlides.push(slide)
-    arrPginationDot.push(paginationDot)
+    arrPaginationDot.push(paginationDot)
 })
 arrSlides[0].style.opacity = '1'
-arrPginationDot[0].style.backgroundColor = 'black'
+arrPaginationDot[0].style.backgroundColor = 'black'
 
 const arrowLeft = document.createElement('img')
 arrowLeft.setAttribute('src', 'images/left.png')
@@ -53,11 +53,10 @@ function slideRight() {
         sliderContainer.style.transform = `translate3d(-${counter*240}px, 0, 0)`  // sliderContainer.style.margin = `-${STEP*300}px`
         arrSlides[counter].style.opacity = '1'
         arrSlides[counter-1].style.opacity = '0.5'
-        arrPginationDot[counter].style.backgroundColor = 'black'
-        arrPginationDot[counter-1].style.backgroundColor = 'white'
-        console.log(arrPaginationDot[counter]);
+        arrPaginationDot[counter].style.backgroundColor = 'black'
+        arrPaginationDot[counter-1].style.backgroundColor = 'white'
     }
-    setTimeout(change, 300)
+    setTimeout(change, 200)
 }
 
 function slideLeft() {
@@ -71,9 +70,9 @@ function slideLeft() {
         sliderContainer.style.transform = `translate3d(-${counter*240}px, 0, 0)`
         arrSlides[counter].style.opacity = '1'
         arrSlides[counter+1].style.opacity = '0.5'
-        arrPginationDot[counter].style.backgroundColor = 'black'
-        arrPginationDot[counter+1].style.backgroundColor = 'white'
+        arrPaginationDot[counter].style.backgroundColor = 'black'
+        arrPaginationDot[counter+1].style.backgroundColor = 'white'
     }
-    setTimeout(change, 300)
+    setTimeout(change, 200)
 
 }
